@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body developers">
+            <center><img class="rounded-circle account-img" 
+            src="{{ url_for('static', filename='images/developers/Dorado.jpg')}}"></center>
+            <center>Asmadi S. Dorado</center>
+            <center>Email: qasdorado@tip.edu.ph</center>
+        </div>
+        <div class="media-body developers">
+            <center><img class="rounded-circle account-img" 
+                src="{{ url_for('static', filename='images/developers/Gerarman.jpg')}}"></center>
+            <center>Erika Marie G. Gerarman</center>
+            <center>Email: qemggerarman@tip.edu.ph</center>
+        </div>
+        <div class="media-body developers">
+            <center><img class="rounded-circle account-img" 
+                src="{{ url_for('static', filename='images/developers/Quebral.jpg')}}"></center>
+            <center>John Brian F. Quebral</center>
+            <center>Email: qjbfquebral@tip.edu.ph</center>
+        </div>
+        <div class="media-body developers">
+            <center><img class="rounded-circle account-img" 
+                src="{{ url_for('static', filename='images/developers/Valenzuela.jpg')}}"><br></center>
+            <center>Daryl Neil L. Valenzuela</center>
+            <center>Email: qdnlvalenzuela@tip.edu.ph</center>
+        </div>
+    </article>
+{% endblock content %}

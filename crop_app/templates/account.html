@@ -1,0 +1,28 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <center><a href="#"><img class="rounded-circle account-img" src="{{image_file}}"></a></center>
+            <div class="media-body">
+                <h2 class="account-heading">{{ current_user.username }}</h2>
+            </div>
+        </div>
+    </div>
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <h4>Personal Information</h4>
+            </div>
+            <br>
+            <p style="font-weight: bold; display: inline; margin-right: 30px;">First Name:</p> 
+            {{ current_user.user_fname }}<br>
+            <p style="font-weight: bold; display: inline; margin-right: 12px;">Middle Name:</p>
+            {{ current_user.user_mname }}<br>
+            <p style="font-weight: bold; display: inline; margin-right: 30px;">Last Name:</p>
+            {{ current_user.user_lname }}<br>
+            <p style="font-weight: bold; display: inline; margin-right: 70px;">Email:</p>
+            {{ current_user.email }}<br><br>
+            <a href="{{ url_for('update_account') }}"><button class="btn btn-outline-info">Update Information</button></a>
+        </div>
+    </article>
+{% endblock content %}

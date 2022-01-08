@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <center><h2>Welcome to Crop Recommendations!</h2></center>
+                </div>
+                <center><h3 class="article-title">Site Updates</h3></center>
+            </div>
+            </article>
+            {% for post in posts %}
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <a class="mr-2" href="#">{{ post.author }}</a>
+                            <small class="text-muted">{{ post.date_posted }}</small>
+                        </div>
+                        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                        <p class="article-content">{{ post.content }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock content %}
